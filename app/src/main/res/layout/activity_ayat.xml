@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/soft_yellow"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.AyatActivity">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary"
+                android:orientation="horizontal"
+                android:paddingVertical="25dp"
+                android:paddingHorizontal="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:paddingBottom="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:id="@+id/latin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_medium"
+                        android:textColor="@color/soft_yellow"
+                        android:textSize="20sp"
+                        tools:text="Al-Fatihah" />
+
+                <TextView
+                    android:paddingBottom="15dp"
+                    app:layout_constraintTop_toTopOf="@id/latin"
+                    app:layout_constraintBottom_toBottomOf="@id/latin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/arabic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_medium"
+                    android:textColor="@color/soft_yellow"
+                    android:textSize="26sp"
+                    tools:text="Al-Fatihah" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/latin">
+
+                    <TextView
+                        android:id="@+id/jumlah_ayat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="7dp"
+                        android:background="@drawable/info_bg"
+                        android:fontFamily="@font/rubik_medium"
+                        android:paddingHorizontal="25dp"
+                        android:paddingVertical="10dp"
+                        android:textColor="@color/soft_yellow"
+                        android:textSize="12sp"
+                        tools:text="7 Ayat" />
+
+                    <TextView
+                        android:id="@+id/tempat_turun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/info_bg"
+                        android:fontFamily="@font/rubik_medium"
+                        android:paddingHorizontal="25dp"
+                        android:paddingVertical="10dp"
+                        android:textColor="@color/soft_yellow"
+                        android:textSize="12sp"
+                        tools:text="7 Ayat" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_ayat"
+                tools:itemCount="2"
+                tools:listitem="@layout/list_ayat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="124dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/info" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

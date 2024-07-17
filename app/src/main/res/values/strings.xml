@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name" translatable="false">Al-Qur\'an</string>
+    <string name="search">Search</string>
+    <string name="basmalah" translatable="false">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</string>
+    <string name="clear" translatable="false">clear</string>
+
+</resources>
